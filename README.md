@@ -8,7 +8,7 @@ A lot of this was learned from the excellent book [Web Development with Node & E
 ### Setup
 
 If you want to run this locally you'll need to register for a [Battle.net API](https://dev.battle.net/) account. The app expects there to be a `credentials.js` file in
-the base directory, which should look like this:
+the base directory with the API key and secret, which should look like this:
 
 ```javascript
 module.exports = {
