@@ -28,7 +28,8 @@ gulp
 node andy-wowhol.js
 ```
 
-This will run the application locally. For the best visuals, install the Futura PT font family locally with Typekit.
+This will run the application locally. For the best visuals, install the [Futura PT](https://typekit.com/fonts/futura-pt) font family locally with
+[Typekit](https://typekit.com/).
 
 ### Legal Disclaimer
 
