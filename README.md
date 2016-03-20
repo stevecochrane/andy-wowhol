@@ -2,7 +2,8 @@
 
 A silly toy Node app where you input a World of Warcraft realm name and character name, which then displays that
 character's avatar in an Andy Warhol pop art style with CSS color filters. This was done to learn more about building
-applications with Node and Express, and to try making something with the Battle.net API.
+applications with Node and Express, and to try making something with the Battle.net API. This isn't publicly hosted
+anywhere since I don't have a place to host Node apps yet.
 
 A lot of this was learned from the excellent book
 [Web Development with Node & Express](http://shop.oreilly.com/product/0636920032977.do) by Ethan Brown.
