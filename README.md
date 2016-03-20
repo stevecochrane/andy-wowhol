@@ -1,14 +1,14 @@
 # andy-wowhol
 
-A silly toy Node app where you input a World of Warcraft realm name and character name, and it then displays that character's avatar in an Andy Warhol pop art style.
-This was done to learn more about building applications with Node and Express, and to try making something with the Battle.net API.
+A silly toy Node app where you input a World of Warcraft realm name and character name, and it then displays that character's avatar in an Andy Warhol pop art style
+with CSS color filters. This was done to learn more about building applications with Node and Express, and to try making something with the Battle.net API.
 
 A lot of this was learned from the excellent book [Web Development with Node & Express](http://shop.oreilly.com/product/0636920032977.do) by Ethan Brown.
 
 ### Setup
 
-If you want to run this locally you'll need to register for a [Battle.net API](https://dev.battle.net/) account. The app expects there to be a `credentials.js` file in
-the base directory with the API key and secret, which should look like this:
+If you want to run this locally you'll need to register for a [Battle.net API](https://dev.battle.net/) account and make an application. The app expects there to be
+a `credentials.js` file in the base directory with the application's API key and secret, which should look like this:
 
 ```javascript
 module.exports = {
