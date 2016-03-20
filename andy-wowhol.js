@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //  Home page
 app.get("/", function(req, res) {
+    //  TODO: Find out more about CSRF and add support for it (or remove this if it's not necessary)
     res.render("home", { csrf: "CSRF value goes here" });
 });
 
