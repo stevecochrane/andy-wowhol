@@ -1,0 +1,9 @@
+extends layouts/main
+
+block body-content
+    .art-piece
+        .pieces
+            img.piece.top-left(src="http://render-api-us.worldofwarcraft.com/static-render/us/" + thumbnail)
+            img.piece.top-right(src="http://render-api-us.worldofwarcraft.com/static-render/us/" + thumbnail)
+            img.piece.bottom-left(src="http://render-api-us.worldofwarcraft.com/static-render/us/" + thumbnail)
+            img.piece.bottom-right(src="http://render-api-us.worldofwarcraft.com/static-render/us/" + thumbnail)

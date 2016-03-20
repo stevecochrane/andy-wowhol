@@ -1,0 +1,13 @@
+extends layouts/main
+
+block body-content
+    .input-form
+        form(method="POST", action="/process?form=avatar")
+            input(type="hidden", name="_csrf" value=csrf)
+            fieldset.input-form-field
+                label.input-form-label(for="realm") Realm
+                input.input-form-input(type="text", name="realm")
+            fieldset.input-form-field
+                label.input-form-label(for="characterName") Character Name
+                input.input-form-input(type="text", name="characterName")
+            button.input-form-submit(type="submit") Immortalize

@@ -1,0 +1,219 @@
+/*  --------------------------------------------------
+    IMPORTS
+    -------------------------------------------------- */
+
+@import "normalize.css";
+
+
+/*  --------------------------------------------------
+    VARIABLES
+    -------------------------------------------------- */
+
+:root {
+    --color-museum-piece-light:        #f0efed; /* http://www.0to255.com/b1ada4, +8 */
+    --color-museum-piece:              #b1ada4;
+    --color-museum-piece-dark:         #6e6a5f; /* http://www.0to255.com/b1ada4, -8 */
+
+    --border-color-base:               #000;
+    --font-stack-base:                 "Futura PT", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    --link-color-base:                 #00f;
+    --link-color-hover:                #ff8e8c;
+    --page-width:                      800;
+    --text-color-base:                 #000;
+    --text-color-light:                #8f8f8f;
+}
+
+
+/*  --------------------------------------------------
+    MEDIA QUERIES
+    -------------------------------------------------- */
+
+@custom-media --mq-medium (max-width: 800px);
+@custom-media --mq-small (max-width: 600px);
+@custom-media --mq-high-dpi (min-resolution: 144dpi);
+
+
+/*  --------------------------------------------------
+    BASE STYLES
+    -------------------------------------------------- */
+
+html {
+    box-sizing: border-box;
+
+    @media (--mq-medium) {
+        font-size: 87.5%;
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: var(--color-museum-piece);
+    font-family: var(--font-stack-base);
+    -webkit-font-smoothing: subpixel-antialiased;
+    line-height: 24px;
+    text-rendering: optimizeLegibility;
+}
+
+/*  There's a lot of repetition from this point forward which I would normally optimize in a production application,
+    but in this case it's not worth the time. */
+
+.site-header {
+    font-weight: 700;
+    font-size: 64px;
+    letter-spacing: 0.1em;
+    line-height: 72px;
+    margin: 96px 48px 72px;
+    text-align: center;
+    text-shadow:
+        1px 1px 0 var(--color-museum-piece-dark),
+        2px 2px 0 var(--color-museum-piece-dark),
+        3px 3px 0 var(--color-museum-piece-dark),
+        4px 4px 0 var(--color-museum-piece-dark),
+        5px 5px 0 var(--color-museum-piece-dark),
+        6px 6px 0 var(--color-museum-piece-dark),
+        7px 7px 0 var(--color-museum-piece-dark),
+        8px 8px 0 var(--color-museum-piece-dark);
+    text-transform: uppercase;
+}
+
+.site-header-link {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+        text-shadow:
+            1px 1px 0 hotpink,
+            2px 2px 0 hotpink,
+            3px 3px 0 hotpink,
+            4px 4px 0 hotpink,
+            5px 5px 0 hotpink,
+            6px 6px 0 hotpink,
+            7px 7px 0 hotpink,
+            8px 8px 0 hotpink,
+            9px 9px 0 hotpink,
+            10px 10px 0 hotpink;
+        transition: color 0.2s, text-shadow 0.2s;
+    }
+}
+
+.input-form {
+    background: #fff;
+    box-shadow:
+        1px 1px 0 var(--color-museum-piece-dark),
+        2px 2px 0 var(--color-museum-piece-dark),
+        3px 3px 0 var(--color-museum-piece-dark),
+        4px 4px 0 var(--color-museum-piece-dark),
+        5px 5px 0 var(--color-museum-piece-dark),
+        6px 6px 0 var(--color-museum-piece-dark),
+        7px 7px 0 var(--color-museum-piece-dark),
+        8px 8px 0 var(--color-museum-piece-dark);
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 24px 36px 48px;
+}
+
+.input-form-field {
+    border: none;
+    margin: 0;
+    padding: 0 0 24px;
+}
+
+.input-form-label {
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.input-form-input {
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0 12px;
+    width: 100%;
+}
+
+.input-form-submit {
+    background: #000;
+    border: 0;
+    border-radius: 0.25em;
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 24px;
+    margin: 24px auto 0;
+    padding: 12px 48px;
+    text-transform: uppercase;
+    width: 61.80339888%;
+}
+
+.art-piece {
+    background: #fff;
+    box-shadow:
+        1px 1px 0 var(--color-museum-piece-dark),
+        2px 2px 0 var(--color-museum-piece-dark),
+        3px 3px 0 var(--color-museum-piece-dark),
+        4px 4px 0 var(--color-museum-piece-dark),
+        5px 5px 0 var(--color-museum-piece-dark),
+        6px 6px 0 var(--color-museum-piece-dark),
+        7px 7px 0 var(--color-museum-piece-dark),
+        8px 8px 0 var(--color-museum-piece-dark);
+    margin: 0 auto;
+    max-width: 816px;
+    width: 100%;
+}
+
+.pieces {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 24px;
+    text-align: center;
+}
+
+.piece {
+    height: calc((336 / 768) * 100%);
+    image-rendering: pixelated;
+    margin: calc((24 / 768) * 100%);
+    width: calc((336 / 768) * 100%);
+}
+
+.top-left {
+    filter:
+        brightness(125%)
+        contrast(125%)
+        hue-rotate(90deg)
+        saturate(125%);
+}
+
+.top-right {
+    filter:
+        brightness(125%)
+        contrast(125%)
+        hue-rotate(180deg)
+        saturate(125%);
+}
+
+.bottom-left {
+    filter:
+        brightness(125%)
+        contrast(125%)
+        hue-rotate(270deg)
+        saturate(125%);
+}
+
+.bottom-right {
+    filter:
+        brightness(125%)
+        contrast(125%)
+        hue-rotate(360deg)
+        saturate(125%);
+}

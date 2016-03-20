@@ -1,0 +1,25 @@
+{
+  "name": "andy-wowhol",
+  "version": "1.0.0",
+  "description": "Loads a World of Warcraft character avatar from Blizzard's Battle.net API and renders it in a pop art style.",
+  "main": "andy-wowhol.js",
+  "author": "Steve Cochrane",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.3.3",
+    "body-parser": "^1.15.0",
+    "cssnano": "^3.5.2",
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.0",
+    "jade": "^1.11.0",
+    "normalize.css": "^4.0.0",
+    "postcss-calc": "^5.2.0",
+    "postcss-color-function": "^2.0.1",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-import": "^8.0.2",
+    "postcss-nested": "^1.0.0",
+    "postcss-pxtorem": "^3.3.1"
+  }
+}
