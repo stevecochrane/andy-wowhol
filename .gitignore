@@ -1,4 +1,5 @@
 .DS_Store
-node_modules/
+design-materials/
 dist/
+node_modules/
 credentials.js
