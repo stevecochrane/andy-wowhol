@@ -8,6 +8,12 @@ but this isn't publicly hosted anywhere since I don't have a place to host Node 
 A lot of this was learned from the excellent book
 [Web Development with Node & Express](http://shop.oreilly.com/product/0636920032977.do) by Ethan Brown.
 
+### Preview
+
+![Andy WoWhol input screen](/src/static/images/preview-input.jpg?raw=true)
+
+![Andy WoWhol output screen](/src/static/images/preview-output.jpg?raw=true)
+
 ### Setup
 
 If you want to run this locally you'll need to register for a [Battle.net API](https://dev.battle.net/) account and
