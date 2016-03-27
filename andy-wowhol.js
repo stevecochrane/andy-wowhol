@@ -16,7 +16,17 @@ var app = express();
 
 app.set("view engine", "jade");
 app.set("views", "src/views/");                  //  TODO: set this to dist/views/ once there is a build script in place.
+
+//  Treat "/foo" and "/Foo" as different URLs
+app.set("case sensitive routing", true);
+
+//  Treat "/foo" and "/foo/" as different URLs
+app.set("strict routing", true);
+
+//  Default to port 3000
 app.set("port", process.env.PORT || 3000);
+
+//  Make the static directory publicly accessible
 app.use(express.static(__dirname + "/dist/static/"));
 
 //  Compress all requests
