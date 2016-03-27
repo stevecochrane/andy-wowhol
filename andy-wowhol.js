@@ -1,6 +1,7 @@
-var bodyParser = require("body-parser");
-var express    = require("express");
-var slashes    = require("connect-slashes");
+var bodyParser     = require("body-parser");
+var compression    = require("compression");
+var express        = require("express");
+var slashes        = require("connect-slashes");
 
 //  Private credentials
 var credentials = require('./credentials.js');
@@ -17,6 +18,9 @@ app.set("view engine", "jade");
 app.set("views", "src/views/");                  //  TODO: set this to dist/views/ once there is a build script in place.
 app.set("port", process.env.PORT || 3000);
 app.use(express.static(__dirname + "/dist/static/"));
+
+//  Compress all requests
+app.use(compression());
 
 //  Set up form handling
 app.use(bodyParser.urlencoded({ extended: true }));
