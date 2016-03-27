@@ -1,6 +1,6 @@
 {
   "name": "andy-wowhol",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Loads a World of Warcraft character avatar from Blizzard's Battle.net API and renders it in a pop art style.",
   "main": "andy-wowhol.js",
   "author": "Steve Cochrane",
