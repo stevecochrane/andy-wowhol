@@ -14,7 +14,7 @@ var battlenet = require('./lib/battlenet.js')({
 var app = express();
 
 app.set("view engine", "jade");
-app.set("views", "src/views");                  //  TODO: set this to dist/ once there is a build script in place.
+app.set("views", "src/views/");                  //  TODO: set this to dist/views/ once there is a build script in place.
 app.set("port", process.env.PORT || 3000);
 app.use(express.static(__dirname + "/dist/static/"));
 

@@ -2,7 +2,7 @@ extends layouts/main
 
 block body-content
     .input-form
-        form(method="POST", action="/process?form=avatar")
+        form(method="POST", action="/process/?form=avatar")
             input(type="hidden", name="_csrf" value=csrf)
             fieldset.input-form-field
                 label.input-form-label(for="realm") Realm

@@ -26,7 +26,7 @@ gulp.task("css", function() {
             autoprefixer(),
             cssnano()
         ]))
-        .pipe(gulp.dest("dist/static/css"));
+        .pipe(gulp.dest("dist/static/css/"));
 });
 
 gulp.task("default", [
