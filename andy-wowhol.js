@@ -1,5 +1,6 @@
 var bodyParser = require("body-parser");
 var express    = require("express");
+var slashes    = require("connect-slashes");
 
 //  Private credentials
 var credentials = require('./credentials.js');
@@ -15,10 +16,13 @@ var app = express();
 app.set("view engine", "jade");
 app.set("views", "src/views");                  //  TODO: set this to dist/ once there is a build script in place.
 app.set("port", process.env.PORT || 3000);
-app.use(express.static(__dirname + "/dist/static"));
+app.use(express.static(__dirname + "/dist/static/"));
 
 //  Set up form handling
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//  Enforce trailing slashes for URLs
+app.use(slashes());
 
 //  Home page
 app.get("/", function(req, res) {
@@ -27,7 +31,7 @@ app.get("/", function(req, res) {
 });
 
 //  Display page
-app.get("/display", function(req, res) {
+app.get("/display/", function(req, res) {
     res.locals.realmName = req.query.realm;
     res.locals.characterName = req.query.character;
 
@@ -39,14 +43,14 @@ app.get("/display", function(req, res) {
 });
 
 //  Process form submissions
-app.post("/process", function(req, res) {
+app.post("/process/", function(req, res) {
     console.log("Form: " + req.query.form);
     console.log("CSRF token: " + req.body._csrf);
     console.log("Realm: " + req.body.realm);
     console.log("Character Name: " + req.body.characterName);
 
     //  TODO: eventually these should be like "/display/:realm/:character/" instead of a query string.
-    res.redirect(303, "/display?realm=" + req.body.realm + "&character=" + req.body.characterName);
+    res.redirect(303, "/display/?realm=" + req.body.realm + "&character=" + req.body.characterName);
 });
 
 //  Custom 404 page
