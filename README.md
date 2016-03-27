@@ -10,9 +10,9 @@ A lot of this was learned from the excellent book
 
 ### Preview
 
-![Andy WoWhol input screen](/src/static/images/preview-input.jpg?raw=true)
+<img src="/src/static/images/preview-input.jpg?raw=true" srcset="/src/static/images/preview-input.jpg?raw=true, /src/static/images/preview-input-2x.jpg 2x" alt="Andy WoWhol input screen" />
 
-![Andy WoWhol output screen](/src/static/images/preview-output.jpg?raw=true)
+<img src="/src/static/images/preview-output.jpg?raw=true" srcset="/src/static/images/preview-output.jpg?raw=true, /src/static/images/preview-output-2x.jpg 2x" alt="Andy WoWhol output screen" />
 
 ### Setup
 
