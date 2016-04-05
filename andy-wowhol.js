@@ -45,12 +45,16 @@ app.get("/", function(req, res) {
 });
 
 //  Display page
-app.get("/display/", function(req, res) {
-    res.locals.realmName = req.query.realm;
-    res.locals.characterName = req.query.character;
+app.get("/display/:realm/:character/", function(req, res) {
+    var realmName = req.params.realm;
+    var characterName = req.params.character;
+
+    //  Pass these values to the view, though these aren't used yet.
+    res.locals.realmName = realmName;
+    res.locals.characterName = characterName;
 
     //  TODO: Eventually this should be passed to the view with AJAX so we can render the rest of the page right away.
-    res.locals.testData = battlenet.characterAvatar(req.query.realm, req.query.character, function(data) {
+    res.locals.testData = battlenet.characterAvatar(realmName, characterName, function(data) {
         res.locals.thumbnail = data.thumbnail;
         res.render("display");
     });
@@ -63,8 +67,7 @@ app.post("/process/", function(req, res) {
     console.log("Realm: " + req.body.realm);
     console.log("Character Name: " + req.body.characterName);
 
-    //  TODO: eventually these should be like "/display/:realm/:character/" instead of a query string.
-    res.redirect(303, "/display/?realm=" + req.body.realm + "&character=" + req.body.characterName);
+    res.redirect(303, "/display/" + req.body.realm + "/" + req.body.characterName + "/");
 });
 
 //  Custom 404 page
