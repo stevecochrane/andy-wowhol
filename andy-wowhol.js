@@ -2,6 +2,7 @@ var bodyParser     = require("body-parser");
 var compression    = require("compression");
 var express        = require("express");
 var slashes        = require("connect-slashes");
+var uncapitalize   = require("express-uncapitalize");
 
 //  Private credentials
 var credentials = require('./credentials.js');
@@ -32,8 +33,11 @@ app.use(express.static(__dirname + "/dist/static/"));
 //  Compress all requests
 app.use(compression());
 
-//  Enforce trailing slashes for URLs
+//  Enforce trailing slashes for all URLs
 app.use(slashes());
+
+//  Enforce lowercase for all URLs
+app.use(uncapitalize());
 
 //  Set up form handling
 app.use(bodyParser.urlencoded({ extended: true }));
