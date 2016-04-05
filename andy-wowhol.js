@@ -32,11 +32,11 @@ app.use(express.static(__dirname + "/dist/static/"));
 //  Compress all requests
 app.use(compression());
 
-//  Set up form handling
-app.use(bodyParser.urlencoded({ extended: true }));
-
 //  Enforce trailing slashes for URLs
 app.use(slashes());
+
+//  Set up form handling
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //  Home page
 app.get("/", function(req, res) {
