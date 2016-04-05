@@ -49,7 +49,7 @@ app.get("/display/", function(req, res) {
     res.locals.realmName = req.query.realm;
     res.locals.characterName = req.query.character;
 
-    //  TODO: Eventually this should be passed to the view with a promise so we can render the page right away.
+    //  TODO: Eventually this should be passed to the view with AJAX so we can render the rest of the page right away.
     res.locals.testData = battlenet.characterAvatar(req.query.realm, req.query.character, function(data) {
         res.locals.thumbnail = data.thumbnail;
         res.render("display");
